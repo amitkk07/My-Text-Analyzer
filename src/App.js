@@ -5,7 +5,6 @@ import About from './components/About';
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import Alert from "./components/Alert";
-
 function App() {
   const [mode, setMode] = useState("light");
   const [btn, setBtn] = useState("Enable Dark Mode");
@@ -42,24 +41,13 @@ function App() {
   };
   return (
     <>
-  
-      <Navbar
-        title="Play with Text"
-        aboutText="About Us"
-        mode={mode}
-        toggleMode={toggleMode}
-        btn={btn}
-      />
+      <Navbar title="Play with Text"   aboutText="About" mode={mode} toggleMode={toggleMode} btn={btn} />
       <Alert alert={alert} />
-  
       <div className="container my-3">
-      
-        <Textform heading="Enter your text here" mode={mode} showAlert={showAlert} />
-        
-        {/* <About/> */}
-       
+      <Textform heading="Enter your text here" mode={mode} showAlert={showAlert} /> 
+            {/* <About /> */}
       </div>
-      
+ 
     </>
   );
 }
